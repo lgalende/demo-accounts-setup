@@ -1,0 +1,11 @@
+node_modules
+artifacts
+cache
+dist
+.env
+*.log
+
+output
+*.txt
+*.png
+*.pdf

@@ -1,0 +1,25 @@
+{
+  "name": "demo-accounts-setup",
+  "version": "1.0.0",
+  "description": "This script automates the creation and funding of **15 new Ethereum wallets** on **Optimism mainnet**, including:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "ethers": "^6.14.4",
+    "pdfkit": "^0.17.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.7",
+    "@types/pdfkit": "^0.14.0",
+    "@types/qrcode": "^1.5.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
