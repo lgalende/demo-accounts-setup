@@ -1,9 +1,9 @@
 # 🧾 Optimism Account Setup Script
 
-This script automates the creation and funding of **15 new Ethereum wallets** on **Optimism mainnet**, including:
+The `setup-accounts.ts` script automates the creation and funding of **15 new Ethereum wallets** on **Optimism mainnet**, including:
 
 - Sending each account:
-  - `0.0004 ETH` for gas
+  - `0.0001 ETH` for gas
   - `5 USDC`
 - Granting **infinite approvals** for both `USDC` and `aUSDC` to a Settler contract
 - Generating **QR codes** for easy MetaMask mobile import
@@ -14,7 +14,7 @@ This script automates the creation and funding of **15 new Ethereum wallets** on
 
 - Node.js v16 or higher
 - An Optimism wallet funded with:
-  - At least `0.006 ETH` (0.0004 × 15)
+  - At least `0.0015 ETH` (0.0001 × 15)
   - At least `75 USDC` (5 × 15)
 
 ---
@@ -24,18 +24,14 @@ This script automates the creation and funding of **15 new Ethereum wallets** on
 1. **Clone this repo**
 
 ```bash
-git clone https://github.com/your-repo/optimism-setup.git
-cd optimism-setup
+git clone https://github.com/lgalende/demo-accounts-setup.git
+cd demo-accounts-setup
 ```
 
 2. **Install dependencies**
 
 ```bash
-npm init -y
-npm install ethers qrcode dotenv
-npm install --save-dev typescript ts-node @types/node @types/qrcode
-npx tsc --init
-mkdir qr
+npm install
 ```
 
 3. **Create `.env` file**
@@ -66,3 +62,12 @@ This will:
 - Save:
     - accounts.txt with all private keys and addresses
     - QR codes in qr/account-*.png (import into MetaMask mobile)
+
+6. **Generate a PDF with QR codes and account info**
+
+```bash
+npx ts-node generate-qrs-pdf.ts
+```
+
+This will create:
+- `output/accounts-<timestamp>.pdf`: one QR + address + PK per page
