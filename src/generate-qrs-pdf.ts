@@ -2,7 +2,7 @@ import PDFDocument from 'pdfkit'
 import fs from 'fs'
 import path from 'path'
 
-const OUTPUT_DIR = path.join(__dirname, 'output')
+const OUTPUT_DIR = path.join(__dirname, '../output')
 const QR_DIR = path.join(OUTPUT_DIR, 'qr')
 const QR_SIZE = 300
 

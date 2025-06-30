@@ -52,7 +52,7 @@ const SETTLER_ADDRESS = "...";
 5. **Run the script**
 
 ```bash
-npx ts-node setup-accounts.ts
+npx ts-node src/setup-accounts.ts
 ```
 
 This will:
@@ -60,13 +60,13 @@ This will:
 - Fund each with ETH and USDC
 - Approve USDC and aUSDC to the SETTLER_ADDRESS
 - Save:
-    - accounts.txt with all private keys and addresses
-    - QR codes in qr/account-*.png (import into MetaMask mobile)
+    - `output/accounts-<timestamp>.txt` with all private keys and addresses
+    - QR codes in `output/qr/account-<i>-<address>.png` (import into MetaMask mobile)
 
 6. **Generate a PDF with QR codes and account info**
 
 ```bash
-npx ts-node generate-qrs-pdf.ts
+npx ts-node src/generate-qrs-pdf.ts
 ```
 
 This will create:
