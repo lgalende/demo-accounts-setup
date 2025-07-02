@@ -6,8 +6,8 @@ import { Contract } from 'ethers'
 import * as QRCode from 'qrcode'
 import fs from 'fs/promises'
 
-const USDC_ADDRESS = '0x0b2c639c533813f4aa9d7837caf62653d097ff85'
-const AUSDC_ADDRESS = '0x625E7708f30cA75bfd92586e17077590C60eb4cD'
+const USDC_ADDRESS = '0x7f5c764cbc14f9669b88837ca1490cca17c31607' // USDC.e (underlying asset of aOptUSDC)
+const AUSDC_ADDRESS = '0x625E7708f30cA75bfd92586e17077590C60eb4cD' // aOptUSDC
 const SETTLER_ADDRESS = '0xdcF1D9d12A0488dFb70A8696f44d6D3Bc303963D'
 const AMOUNT_USDC = parseUnits('5', 6)        // 5 USDC (6 decimals)
 const AMOUNT_ETH = parseUnits('0.0001', 18)   // 0.0001 ETH ~ 0.25 USD
